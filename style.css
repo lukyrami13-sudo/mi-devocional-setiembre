@@ -1,0 +1,900 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #f4efe5;
+    line-height: 1.7;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+.encabezado {
+    padding: 28px 20px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #191714,
+            #151311
+        );
+
+    border-bottom:
+        1px solid rgba(199, 167, 106, 0.18);
+
+    position: relative;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-cruz {
+    font-size: 25px;
+    color: #c9aa70;
+}
+
+.logo h1 {
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #aaa39a;
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   DEVOCIONAL PRINCIPAL
+   ===================================================== */
+
+.devocional-principal {
+    height: 500px;
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 25px;
+
+    /*
+       NO ponemos ninguna imagen aquí.
+       JavaScript colocará automáticamente:
+       01.jpeg, 02.jpeg, 03.jpeg...
+    */
+
+    background-color: #000000;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.20) 25%,
+            rgba(0, 0, 0, 0.20) 65%,
+            rgba(0, 0, 0, 0.90) 100%
+        );
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   DEGRADADO INFERIOR
+   ===================================================== */
+
+.devocional-principal::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 120px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            #000000 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENIDO DEVOCIONAL
+   ===================================================== */
+
+.contenido-devocional {
+    max-width: 760px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.fecha {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: #d4b779;
+
+    margin-bottom: 20px;
+}
+
+.separador {
+    width: 50px;
+    height: 1px;
+
+    background: #c7a76a;
+
+    margin: 0 auto 28px;
+}
+
+.contenido-devocional h2 {
+    font-size: clamp(34px, 6vw, 58px);
+
+    line-height: 1.15;
+
+    font-weight: normal;
+
+    margin-bottom: 28px;
+
+    text-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.8);
+}
+
+.pasaje {
+    font-size: clamp(18px, 3vw, 23px);
+
+    color: #eee8dc;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    font-style: italic;
+}
+
+
+/* =====================================================
+   REFLEXIÓN
+   ===================================================== */
+
+.reflexion {
+    max-width: 850px;
+
+    margin: -1px auto 0;
+
+    padding: 75px 30px 65px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.reflexion::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #9b7b49,
+            transparent
+        );
+}
+
+.etiqueta {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #c7a76a;
+
+    margin-bottom: 12px;
+}
+
+.reflexion h2 {
+    font-size: 34px;
+
+    font-weight: normal;
+
+    margin-bottom: 18px;
+
+    color: #eee7dc;
+}
+
+.linea-decorativa {
+    width: 45px;
+
+    height: 1px;
+
+    background: #8b6f47;
+
+    margin: 0 auto 30px;
+}
+
+.reflexion p:last-child {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #d0cbc2;
+
+    max-width: 720px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   CARTA
+   ===================================================== */
+
+.carta-sorpresa {
+    max-width: 760px;
+
+    margin: 10px auto 70px;
+
+    padding: 20px;
+}
+
+.carta {
+    position: relative;
+
+    padding: 48px 38px;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #302a21 0%,
+            #211d18 48%,
+            #181613 100%
+        );
+
+    border:
+        1px solid rgba(199, 167, 106, 0.42);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+
+    text-align: center;
+}
+
+.carta::before {
+    content: "✦";
+
+    display: block;
+
+    color: #c7a76a;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.carta h2 {
+    font-size: 27px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+    color: #e5c98d;
+}
+
+.carta p {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #ddd7cc;
+}
+
+
+/* =====================================================
+   ZONA DE ACCIONES
+   ===================================================== */
+
+.opciones {
+    max-width: 560px;
+
+    margin: 0 auto 70px;
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(42, 38, 32, 0.72),
+            rgba(24, 22, 19, 0.72)
+        );
+
+    border:
+        1px solid rgba(199, 167, 106, 0.13);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+
+.opciones button {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.opciones button:hover {
+    transform: translateY(-2px);
+}
+
+.boton-principal {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c9a96c,
+            #a9864d
+        );
+
+    color: #171411;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.18);
+}
+
+.boton-principal:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #d8bb82,
+            #b8955b
+        );
+}
+
+.boton-secundario {
+    border:
+        1px solid rgba(199, 167, 106, 0.38);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color: #e9e2d6;
+}
+
+.boton-secundario:hover {
+    background:
+        rgba(199, 167, 106, 0.09);
+
+    border-color: #b9975b;
+}
+
+
+/* =====================================================
+   DEVOCIONALES ANTERIORES
+   ===================================================== */
+
+.lista-anteriores {
+    display: none;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 5px;
+
+    max-height: 450px;
+
+    overflow-y: auto;
+}
+
+.lista-anteriores.visible {
+    display: flex;
+}
+
+.devocional-anterior {
+    position: relative;
+
+    padding: 17px 18px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25221e,
+            #1b1917
+        );
+
+    border:
+        1px solid #39342d;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.devocional-anterior:hover {
+    background: #2b2721;
+
+    border-color: #766044;
+
+    transform: translateX(3px);
+}
+
+.devocional-anterior strong {
+    display: block;
+
+    color: #e3d0a4;
+
+    margin-bottom: 4px;
+}
+
+.devocional-anterior span {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #928d84;
+}
+
+.fecha-anterior {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px !important;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #c7a76a !important;
+
+    margin-bottom: 5px;
+}
+
+.flecha-anterior {
+    position: absolute;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 18px !important;
+
+    color: #c7a76a !important;
+}
+
+.sin-anteriores {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #928d84;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BOTÓN VOLVER AL DÍA DE HOY
+   ===================================================== */
+
+.volver-hoy {
+    display: none;
+}
+
+.volver-hoy.visible {
+    display: block;
+}
+
+
+/* =====================================================
+   REDES
+   ===================================================== */
+
+.redes {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 12px 0 8px;
+}
+
+.redes a {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px solid rgba(255,255,255,0.05);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.redes a:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(199,167,106,0.12);
+
+    border-color:
+        rgba(199,167,106,0.25);
+}
+
+.redes img {
+    width: 34px;
+
+    height: 34px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   BIBLIA
+   ===================================================== */
+
+.biblia {
+    max-width: 900px;
+
+    margin: 0 auto 80px;
+
+    padding: 65px 30px;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(199,167,106,0.14);
+
+    border-bottom:
+        1px solid rgba(199,167,106,0.14);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(49, 43, 34, 0.35),
+            transparent 70%
+        );
+}
+
+.biblia-icono {
+    color: #c7a76a;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.biblia h2 {
+    font-size: 34px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+.biblia p:not(.etiqueta) {
+    font-family: Arial, sans-serif;
+
+    color: #aaa59c;
+
+    margin-bottom: 22px;
+}
+
+.biblia a {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border:
+        1px solid #8b6f47;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    color: #d8c08b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.biblia a:hover {
+    background:
+        rgba(139,111,71,0.15);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   NOVEDADES
+   ===================================================== */
+
+.novedades {
+    max-width: 900px;
+
+    margin: 0 auto 80px;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(38, 35, 30, 0.55),
+            rgba(21, 19, 17, 0.55)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.035);
+}
+
+.novedades h2 {
+    font-size: 28px;
+
+    font-weight: normal;
+
+    color: #ddd6ca;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding: 50px 20px 60px;
+
+    text-align: center;
+
+    background: #000000;
+
+    color: #77736d;
+}
+
+.footer-linea {
+    width: 45px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #69553a,
+            transparent
+        );
+
+    margin: 0 auto 20px;
+}
+
+footer p {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+footer span {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    color: #55514b;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        padding: 22px 15px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+    }
+
+    .devocional-principal {
+        height: 430px;
+
+        min-height: 0;
+
+        padding: 40px 20px;
+    }
+
+    .contenido-devocional h2 {
+        font-size: 35px;
+    }
+
+    .pasaje {
+        font-size: 18px;
+    }
+
+    .reflexion {
+        padding: 60px 22px 50px;
+    }
+
+    .reflexion h2 {
+        font-size: 29px;
+    }
+
+    .reflexion p:last-child {
+        font-size: 17px;
+    }
+
+    .carta-sorpresa {
+        margin-bottom: 45px;
+
+        padding: 15px;
+    }
+
+    .carta {
+        padding: 35px 22px;
+    }
+
+    .carta h2 {
+        font-size: 24px;
+    }
+
+    .carta p {
+        font-size: 17px;
+    }
+
+    .opciones {
+        margin-left: 15px;
+
+        margin-right: 15px;
+
+        padding: 30px 18px;
+    }
+
+    .biblia {
+        margin-left: 15px;
+
+        margin-right: 15px;
+
+        padding: 50px 20px;
+    }
+
+    .novedades {
+        margin-left: 15px;
+
+        margin-right: 15px;
+
+        padding: 45px 20px;
+    }
+
+    .volver-hoy.visible {
+        display: block;
+    }
+}

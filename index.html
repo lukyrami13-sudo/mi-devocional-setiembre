@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mi Devocional</title>
+
+    <meta
+        name="description"
+        content="Un devocional diario para acompañarte cada día."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+         ========================= -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span class="logo-cruz">✦</span>
+
+            <div>
+                <h1>Mi Devocional</h1>
+                <p>Un momento para vos y Dios</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             DEVOCIONAL PRINCIPAL
+             ========================= -->
+
+        <section
+            id="devocional-del-dia"
+            class="devocional-principal"
+        >
+
+            <div class="contenido-devocional">
+
+                <p
+                    id="fecha"
+                    class="fecha"
+                >
+                    Fecha
+                </p>
+
+                <div class="separador"></div>
+
+                <h2 id="titulo">
+                    Título del devocional
+                </h2>
+
+                <p
+                    id="pasaje"
+                    class="pasaje"
+                >
+                    Aquí aparecerá el pasaje bíblico.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             REFLEXIÓN
+             ========================= -->
+
+        <section class="reflexion">
+
+            <p class="etiqueta">
+                REFLEXIÓN
+            </p>
+
+            <h2>
+                Para meditar hoy
+            </h2>
+
+            <div class="linea-decorativa"></div>
+
+            <p id="reflexion">
+                Aquí aparecerá el texto del devocional.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CARTA
+             ========================= -->
+
+        <section
+            id="carta-sorpresa"
+            class="carta-sorpresa"
+        ></section>
+
+
+        <!-- =========================
+             ACCIONES
+             ========================= -->
+
+        <section class="opciones">
+
+            <!-- COMPARTIR -->
+
+            <button
+                id="compartir"
+                class="boton-principal"
+            >
+                Compartir el devocional
+            </button>
+
+
+            <!-- DEVOCIONALES ANTERIORES -->
+
+            <button
+                id="anteriores"
+                class="boton-secundario"
+            >
+                Devocionales anteriores
+            </button>
+
+
+            <!-- LISTA -->
+
+            <div
+                id="lista-anteriores"
+                class="lista-anteriores"
+            ></div>
+
+
+            <!-- VOLVER AL DÍA DE HOY -->
+
+            <button
+                id="volver-hoy"
+                class="boton-secundario volver-hoy"
+            >
+                ← Volver al devocional de hoy
+            </button>
+
+
+            <!-- =========================
+                 REDES
+                 ========================= -->
+
+            <section class="redes">
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+
+                    <img
+                        src="redesig.png"
+                        alt="Instagram"
+                    >
+
+                </a>
+
+
+                <a
+                    href="https://web.whatsapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                >
+
+                    <img
+                        src="redeswhatsaap.png"
+                        alt="WhatsApp"
+                    >
+
+                </a>
+
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+
+                    <img
+                        src="redesfacebook.png"
+                        alt="Facebook"
+                    >
+
+                </a>
+
+            </section>
+
+
+            <!-- =========================
+                 DESCARGAR IMAGEN
+                 ========================= -->
+
+            <button
+                id="descargar"
+                class="boton-secundario"
+            >
+                Descargar devocional
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             BIBLIA
+             ========================= -->
+
+        <section class="biblia">
+
+            <div class="biblia-icono">
+                ✦
+            </div>
+
+            <p class="etiqueta">
+                PALABRA DE DIOS
+            </p>
+
+            <h2>
+                La Biblia
+            </h2>
+
+            <p>
+                Volvé a la Palabra cuando quieras.
+            </p>
+
+            <a
+                href="#"
+                id="enlace-biblia"
+            >
+                Abrir aplicación de Biblia
+            </a>
+
+        </section>
+
+
+        <!-- =========================
+             NOVEDADES
+             ========================= -->
+
+        <section class="novedades">
+
+            <p class="etiqueta">
+                NOVEDADES
+            </p>
+
+            <h2>
+                Un espacio para seguir creciendo
+            </h2>
+
+            <div id="videos"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        <div class="footer-linea"></div>
+
+        <p>
+            Mi Devocional - Att.Lucas
+        </p>
+
+        <span>
+            Un día a la vez.
+        </span>
+
+    </footer>
+
+
+    <!-- =========================
+         HTML2CANVAS
+         ========================= -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    ></script>
+
+
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
